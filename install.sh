@@ -409,7 +409,7 @@ do_install() {
 				$sh_c 'mkdir -p /etc/apt/keyrings && chmod -R 0755 /etc/apt/keyrings'
 				$sh_c "curl -fsSL \"$DOWNLOAD_URL/linux/$lsb_dist/gpg\" | gpg --dearmor --yes -o /etc/apt/keyrings/docker.gpg"
 				$sh_c "chmod a+r /etc/apt/keyrings/docker.gpg"
-				$sh_c "echo \"$apt_repo\" > /etc/apt/sources.list.d/docker.list"
+				#$sh_c "echo \"$apt_repo\" > /etc/apt/sources.list.d/docker.list"
 				$sh_c 'apt-get update -qq >/dev/null'
 			)
 			pkg_version=""
